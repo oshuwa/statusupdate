@@ -1,0 +1,43 @@
+<!-- status.html - Public status page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC 2.0 - Status Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="status-page">
+    <div class="container">
+        <header>
+            <h1>ABC 2.0 Status</h1>
+            <p class="tagline">Check-in status for your loved one</p>
+        </header>
+
+        <main>
+            <section class="status-display">
+                <div class="status-card">
+                    <h2>Current Status</h2>
+                    <div class="status-mood" id="status-mood">-</div>
+                    <div class="status-time" id="status-time">Last updated: Never</div>
+                    <div class="status-message" id="status-message"></div>
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h2>Check-in History</h2>
+                <div class="calendar-container" id="public-calendar-container">
+                    <!-- Calendar will be generated here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 ABC 2.0 - <a href="index.html">Back to Home</a></p>
+        </footer>
+    </div>
+
+    <script src="js/status.js"></script>
+</body>
+</html>
