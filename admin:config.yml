@@ -1,0 +1,30 @@
+# config.yml - Netlify CMS configuration
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: "public/uploads" # Media files will be stored in the repo under public/uploads
+public_folder: "/uploads" # The src attribute for uploaded media will begin with /uploads
+
+collections:
+  - name: "daily-content"
+    label: "Daily Content"
+    files:
+      - label: "Today's Content"
+        name: "today"
+        file: "public/content/today.json"
+        description: "Update the daily poem and puzzle"
+        fields:
+          - label: "Poem"
+            name: "poem"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Content", name: "content", widget: "text"}
+              - {label: "Author", name: "author", widget: "string"}
+          - label: "Puzzle"
+            name: "puzzle"
+            widget: "object"
+            fields:
+              - {label: "Question", name: "question", widget: "text"}
+              - {label: "Answer", name: "answer", widget: "string"}
